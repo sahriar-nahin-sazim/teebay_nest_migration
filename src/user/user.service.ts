@@ -2,7 +2,7 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { LoginDto, RegisterDto } from './dto';
 import * as argon from 'argon2';
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { User } from './entity/user.entity';
+import { User } from '../common/entities/user.entity';
 import { EntityRepository } from '@mikro-orm/postgresql';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';

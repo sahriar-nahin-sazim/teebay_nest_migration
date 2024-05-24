@@ -5,8 +5,8 @@ import {
 } from '@nestjs/common';
 import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { Product } from './entity/product.entity';
 import { EntityRepository } from '@mikro-orm/core';
+import { Product } from 'src/common/entities/product.entity';
 
 @Injectable()
 export class ProductService {

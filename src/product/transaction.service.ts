@@ -5,7 +5,10 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { Transaction, TransactionType } from './entity/transaction.entity';
+import {
+  Transaction,
+  TransactionType,
+} from '../common/entities/transaction.entity';
 import { EntityRepository } from '@mikro-orm/core';
 import { ProductService } from './product.service';
 
