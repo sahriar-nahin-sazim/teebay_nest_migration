@@ -8,7 +8,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { JwtGuard } from 'src/user/guard/jwt.guard';
+import { JwtGuard } from 'src/users/guard/jwt.guard';
 import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
 import { ProductsService } from './products.service';
 import { GetUser } from 'src/decorators/user.decorator';
