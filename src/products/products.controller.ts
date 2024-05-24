@@ -9,7 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtGuard } from 'src/users/guard/jwt.guard';
-import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
+import { CreateProductDto, UpdateProductDto } from './dto/products.dto';
 import { ProductsService } from './products.service';
 import { GetUser } from 'src/decorators/user.decorator';
 
