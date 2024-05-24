@@ -5,7 +5,7 @@ import {
   IsOptional,
   IsString,
 } from 'class-validator';
-import { Category, RentDuration } from 'src/common/entities/products.entity';
+import { ECategory, ERentDuration } from 'src/common/entities/products.entity';
 
 export class CreateProductDto {
   @IsString()
@@ -13,7 +13,7 @@ export class CreateProductDto {
   title: string;
 
   @IsArray()
-  category: Category[];
+  category: ECategory[];
 
   @IsString()
   @IsNotEmpty()
@@ -28,7 +28,7 @@ export class CreateProductDto {
   rentPrice: number;
 
   @IsNotEmpty()
-  rentDuration: RentDuration;
+  rentDuration: ERentDuration;
 }
 
 export class UpdateProductDto {
@@ -38,7 +38,7 @@ export class UpdateProductDto {
 
   @IsArray()
   @IsOptional()
-  category?: Category[];
+  category?: ECategory[];
 
   @IsString()
   @IsOptional()
@@ -53,5 +53,5 @@ export class UpdateProductDto {
   rentPrice?: number;
 
   @IsOptional()
-  rentDuration?: RentDuration;
+  rentDuration?: ERentDuration;
 }

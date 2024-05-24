@@ -10,7 +10,7 @@ import { User } from './users.entity';
 import { v4 } from 'uuid';
 import { Product } from './products.entity';
 
-export enum TransactionType {
+export enum ETransactionType {
   RENT = 'rent',
   SELL = 'sell',
 }
@@ -20,8 +20,8 @@ export class Transaction {
   @PrimaryKey()
   id: string = v4();
 
-  @Enum({ items: () => TransactionType, array: true })
-  type: TransactionType[];
+  @Enum({ items: () => ETransactionType, array: true })
+  type: ETransactionType[];
 
   @Property()
   transactionDate = new Date();

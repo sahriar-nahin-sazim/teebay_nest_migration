@@ -9,7 +9,7 @@ import {
 import { User } from './users.entity';
 import { v4 } from 'uuid';
 
-export enum Category {
+export enum ECategory {
   ELECTRONICS,
   FURNITURE,
   HOME_APPLIANCES,
@@ -18,7 +18,7 @@ export enum Category {
   TOYS,
 }
 
-export enum RentDuration {
+export enum ERentDuration {
   DAY,
   WEEK,
   BIWEEK,
@@ -39,8 +39,8 @@ export class Product {
   @Property()
   description!: string;
 
-  @Enum({ items: () => Category, array: true })
-  category: Category[];
+  @Enum({ items: () => ECategory, array: true })
+  category: ECategory[];
 
   @Property()
   createdAt = new Date();
@@ -51,8 +51,8 @@ export class Product {
   @Property()
   rentPrice!: number;
 
-  @Enum(() => RentDuration)
-  rentDuration!: RentDuration;
+  @Enum(() => ERentDuration)
+  rentDuration!: ERentDuration;
 
   @Property()
   view = 0;

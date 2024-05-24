@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import {
   Transaction,
-  TransactionType,
+  ETransactionType,
 } from '../common/entities/transactions.entity';
 import { EntityRepository } from '@mikro-orm/core';
 import { ProductsService } from './products.service';
@@ -40,7 +40,7 @@ export class TransactionsService {
       originalOwner: ownerId,
       newHolder: userId,
       product: productId,
-      type: TransactionType.SELL,
+      type: ETransactionType.SELL,
     });
 
     await this.em.persistAndFlush(transaction);
@@ -65,7 +65,7 @@ export class TransactionsService {
       originalOwner: product.owner.id,
       newHolder: userId,
       product: productId,
-      type: TransactionType.RENT,
+      type: ETransactionType.RENT,
       rentStartDate: startDate,
       rentEndDate: endDate,
     });
@@ -91,7 +91,7 @@ export class TransactionsService {
       product: {
         id: productId,
       },
-      type: TransactionType.SELL,
+      type: ETransactionType.SELL,
     });
   }
 }
