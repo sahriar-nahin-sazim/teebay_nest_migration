@@ -10,15 +10,15 @@ import {
   TransactionType,
 } from '../common/entities/transactions.entity';
 import { EntityRepository } from '@mikro-orm/core';
-import { ProductService } from './product.service';
+import { ProductsService } from './products.service';
 
 @Injectable()
-export class TransactionService {
+export class TransactionsService {
   private readonly em;
   constructor(
     @InjectRepository(Transaction)
     private transactionRepository: EntityRepository<Transaction>,
-    private productService: ProductService,
+    private productService: ProductsService,
   ) {
     this.em = this.transactionRepository.getEntityManager();
   }

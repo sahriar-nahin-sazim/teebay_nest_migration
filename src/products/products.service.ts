@@ -9,7 +9,7 @@ import { EntityRepository } from '@mikro-orm/core';
 import { Product } from 'src/common/entities/products.entity';
 
 @Injectable()
-export class ProductService {
+export class ProductsService {
   private readonly em;
   constructor(
     @InjectRepository(Product)

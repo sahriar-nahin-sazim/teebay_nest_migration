@@ -10,13 +10,13 @@ import {
 } from '@nestjs/common';
 import { JwtGuard } from 'src/user/guard/jwt.guard';
 import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
-import { ProductService } from './product.service';
+import { ProductsService } from './products.service';
 import { GetUser } from 'src/decorators/user.decorator';
 
 @UseGuards(JwtGuard)
 @Controller('product')
-export class ProductController {
-  constructor(private productService: ProductService) {}
+export class ProductsController {
+  constructor(private productService: ProductsService) {}
 
   @Post()
   createProduct(
