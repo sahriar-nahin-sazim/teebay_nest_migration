@@ -6,9 +6,9 @@ import {
   PrimaryKey,
   Property,
 } from '@mikro-orm/core';
-import { User } from './user.entity';
+import { User } from './users.entity';
 import { v4 } from 'uuid';
-import { Product } from './product.entity';
+import { Product } from './products.entity';
 
 export enum TransactionType {
   RENT = 'rent',

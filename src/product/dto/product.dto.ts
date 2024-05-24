@@ -5,7 +5,7 @@ import {
   IsOptional,
   IsString,
 } from 'class-validator';
-import { Category, RentDuration } from 'src/common/entities/product.entity';
+import { Category, RentDuration } from 'src/common/entities/products.entity';
 
 export class CreateProductDto {
   @IsString()

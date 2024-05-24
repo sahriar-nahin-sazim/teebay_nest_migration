@@ -6,7 +6,7 @@ import {
   PrimaryKey,
   Property,
 } from '@mikro-orm/core';
-import { User } from '../../common/entities/user.entity';
+import { User } from './users.entity';
 import { v4 } from 'uuid';
 
 export enum Category {

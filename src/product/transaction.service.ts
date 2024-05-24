@@ -8,7 +8,7 @@ import {
 import {
   Transaction,
   TransactionType,
-} from '../common/entities/transaction.entity';
+} from '../common/entities/transactions.entity';
 import { EntityRepository } from '@mikro-orm/core';
 import { ProductService } from './product.service';
 
