@@ -11,7 +11,7 @@ import {
 import { JwtGuard } from 'src/user/guard/jwt.guard';
 import { CreateProductDto, UpdateProductDto } from './dto/product.dto';
 import { ProductService } from './product.service';
-import { GetUser } from 'src/user/decorator/user.decorator';
+import { GetUser } from 'src/decorators/user.decorator';
 
 @UseGuards(JwtGuard)
 @Controller('product')
